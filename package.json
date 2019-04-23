@@ -1,12 +1,14 @@
 {
   "name": "react-dnd-cardnd",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Draggable and droppable card for react-dnd. Supports both flat and nested data structures.",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "transpile": "babel src -d dist --copy-files",
+    "prepublishOnly": "npm run transpile"
   },
   "repository": {
     "type": "git",
@@ -19,17 +21,21 @@
   },
   "homepage": "https://github.com/mrmegatelo/react-dnd-card#readme",
   "dependencies": {
+    "react": "^16.8.6",
+    "react-dnd": "^7.4.5",
+    "react-dnd-html5-backend": "^7.4.4",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-preset-react": "^6.24.1",
-    "react": "^16.8.6",
-    "react-dnd": "^7.4.5",
-    "react-dnd-html5-backend": "^7.4.4",
-    "react-dom": "^16.8.6",
-    "webpack": "^4.30.0"
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
   }
 }
