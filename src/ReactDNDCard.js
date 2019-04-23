@@ -1,8 +1,6 @@
 import React, { useRef, useImperativeHandle } from 'react';
 import { DragSource, DropTarget } from 'react-dnd';
 import { getEmptyImage } from 'react-dnd-html5-backend';
-import { connect } from 'react-redux';
-import { treeElements } from '@store/actions';
 
 const style = {
   position: 'relative',
